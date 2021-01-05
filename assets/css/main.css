@@ -1,3 +1,83 @@
+#cnt1 {
+  background: #F4F4F4;
+  margin-top: 95px; }
+  #cnt1 .img_wrap {
+    display: none;
+    position: relative;
+    width: 1400px;
+    height: auto;
+    margin: 0 auto; }
+    #cnt1 .img_wrap img {
+      position: absolute; }
+    #cnt1 .img_wrap img:nth-child(1) {
+      width: 50px;
+      height: 50px;
+      top: 243px;
+      left: 836px; }
+    #cnt1 .img_wrap img:nth-child(2) {
+      width: 105px;
+      height: 105px;
+      top: 50%;
+      right: 44px; }
+    #cnt1 .img_wrap img:nth-child(3) {
+      width: 32px;
+      height: 799px;
+      bottom: 0;
+      right: -234px; }
+    #cnt1 .img_wrap img:nth-child(4) {
+      bottom: 110px;
+      right: -71px; }
+    #cnt1 .img_wrap img:nth-child(5) {
+      width: 65px;
+      height: 65px;
+      bottom: 72px;
+      left: -44px; }
+  #cnt1 h2 {
+    -webkit-transform: perspective(1000px) rotateY(50deg);
+    -moz-transform: perspective(1000px) rotateY(50deg);
+    -o-animation: perspective(1000px) rotateY(50deg);
+    -ms-transform: perspective(1000px) rotateY(50deg);
+    transform: perspective(1000px) rotateY(50deg);
+    font-size: 100px;
+    margin: 100px 0 200px;
+    margin: 0 auto; }
+  #cnt1 p {
+    position: relative;
+    color: #656565;
+    text-align: center;
+    margin-bottom: 33px; }
+    #cnt1 p::before {
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -o-animation: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      content: "";
+      position: absolute;
+      top: -150px;
+      left: 50%;
+      width: 2px;
+      height: 100px;
+      background: #656565; }
 
+#cnt2 .gnb {
+  padding: 228px 0; }
+#cnt2 #indexGnb li + li {
+  margin-top: 90px; }
+
+#footer {
+  text-align: center; }
+  #footer p:nth-child(1) {
+    margin-top: 180px; }
+  #footer strong {
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    background: #fff;
+    width: 500px;
+    border: 5px solid #0BA9E9;
+    background: #ffffff;
+    padding: 56px 97.5px;
+    margin: 90px auto 48px; }
 
 /*# sourceMappingURL=main.css.map */

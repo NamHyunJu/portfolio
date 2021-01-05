@@ -1,3 +1,5 @@
 $(document).ready(function(){
-    $('#header').load('../../header.html .w1400');
+    $('.head').load('../../header.html .header');
+
+    
 });
