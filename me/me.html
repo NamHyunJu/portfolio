@@ -11,20 +11,22 @@
     <script src="../assets/js/style.js"></script>
 </head>
 <body>
-    <header id="header">
-        <button class="gnb_btn" type="button" title="네비게이션"></button>
-        <nav class="gnb" id="gnb">
-            <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="">ABOUT ME</a></li>
-                <li><a href="">PORTFOLIO</a></li>
-                <li><a href="">REPORT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="skip"><a href="#me">본문 바로가기</a></div>
+
+    <header id="header"></header>
+
     <section id="content">
-        <article class="w1400" id="cnt1">
+        <article class="w1400" id="me">
             <h2 class="tit">ABOUT ME</h2>
+            <div class="bg">
+                <img src="../assets/images/aboutme/dot_circle_bg.svg" alt="">
+                <img src="../assets/images/common/yellow_line.svg" alt="">
+                <img src="../assets/images/common/orange_bg.svg" alt="">
+                <img src="../assets/images/aboutme/bluesky_bg.svg" alt="">
+                <img src="../assets/images/common/color_dot.svg" alt="">
+                <img src="../assets/images/aboutme/dot_circle_bg.svg" alt="">
+                <img src="../assets/images/common/yellow_line.svg" alt="">
+            </div>
             <div class="me_before">
                 <p class="click1">물음표(?)를 클릭해주세요!</p>
                 <p class="click2">웃는 이모티콘을 클릭해주세요!</p>
@@ -48,11 +50,11 @@
                     항상 사용자 입장에서 먼저 생각하고,<br>
                     사용자의 기억에서 오래 남을 수 있는 웹사이트를 만들겠습니다.</p>
                 <p>원래 여행이나 야외활동을 좋아하는데 코로나19 사태로 인해 집에 있는 시간이 많아지면서 '영상 만들기'와 '비즈 공예'라는 새로운 취미를 갖게되었습니다.</p>
-                <video src="../assets/images/aboutme/motion.mov"></video>
+                <iframe src="https://youtu.be/DEnpLPTmMi0" title="도형을 활용한 모션그래픽" width="1100">이 브라우저는 iframe을 지원하지 않습니다</iframe>
                 <a href="https://www.youtube.com/channel/UCno9zIHLVtwBVunylUjyqXw">youtube 놀러가기</a>
             </div>
         </article>
-        <article class="w1400" id="cnt2">
+        <article class="w1400" id="skill">
             <h2 class="tit">SKILL</h2>
             <span>제가 잘하는 일을 소개합니다</span>
             <div class="programming">
@@ -100,6 +102,11 @@
             </div>
         </article>
     </section>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="link">
+            <a href="https://github.com/NamHyunJu">Git hub</a>
+            <a href="https://www.youtube.com/channel/UCno9zIHLVtwBVunylUjyqXw/featured">youtube</a>
+        </div>
+    </footer>
 </body>
 </html>
