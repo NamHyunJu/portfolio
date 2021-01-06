@@ -1,41 +1,43 @@
 @charset "utf-8";
 @import "_var","_mixin","_function";
 
-.tit{font-family: hopang;font-size: 100px;}
-
+//about me
+#me .tit,#skill .tit{font-family: hopang;font-size: 100px;}
 #me{
     .tit{margin-bottom: 132px;}
-    .click1,.click2{font-size: 20px;color: $darkGray;}
+    .click1,.click2{font-size: 20px;color: $gray;}
     .click1{text-align: center;margin-bottom: 52px;}
-    .click2{margin-bottom: 56px;}
+    .click2{margin-bottom: 56px;margin-left: 218px;}
     .img_wrap{
         position: relative;width: 664px;height: 647px;background: $orange;
         img,.smile,button{@include cover;}
-        img,.smile{position: absolute;background: no-repeat center;}
-        img{width: 633px;top: -30px;right: 0;background-image: url("../assets/images/aboutme/me.png");}
-        .smile{z-index: 10;}
+        img,.smile{position: absolute;}
+        img{display: inline-block;width: 633px;top: -30px;right: 0;background: no-repeat center;}
         .smile1{
             @include transform(rotate(145deg));
-            width: 67px;height: 67px;top: 158px;left: 193px;background-image: url("../assets/images/icon/smile_icon.svg");
+            width: 67px;height: 67px;top: 158px;left: 193px;
         }
         .smile2{
             @include transform(rotate(21deg));
-            width: 56px;height: 56px;top: 199px;left: 502px;background-image: url("../assets/images/icon/smile_icon.svg");
+            width: 56px;height: 56px;top: 199px;left: 502px;
         }
         .smile3{
             @include transform(rotate(-106deg));
-            width: 68px;height: 68px;top: 370px;left: 473px;background-image: url("../assets/images/icon/smile_icon.svg");
+            width: 68px;height: 68px;top: 370px;left: 473px;
         }
         .smile4{
             @include transform(rotate(-5deg));
-            width: 44px;height: 44px;top: 426px;left: 101px;background-image: url("../assets/images/icon/smile_icon.svg");
+            width: 44px;height: 44px;top: 426px;left: 101px;
         }
         button{width: 86px;height: 86px;background: url("../assets/images/icon/q_mark.svg") no-repeat;}
     }
     .txt{
+        position: absolute;top: 952px;right: 0;width: 701px;
         p{font-size: 80px;font-family: hopang;}
+        .first{float:right;}
+        .mid{padding-left: 107px;}
     }
-    .text{background: gold;
+    .text{
         position: absolute;width: 630px;right: 0;top: 454px;line-height: 32px;
         p{font-size: 22px;word-break: keep-all;}
         .txt1{padding-bottom: 30px;}
@@ -43,7 +45,7 @@
         .txt3{padding-bottom: 409px;}
     }
     .video{
-        position: relative;height: 619px;margin: 81px 0 301px;
+        position: relative;height: 619px;margin: 250px 0 301px;
         iframe{float: right;width: 1100px;height: 619px;}
         a{
             position: absolute;bottom: 0;left: 73px;font-size: 22px;
@@ -52,11 +54,12 @@
     }
 }
 #skill{
-    .tit_wrap{background: gold;
+    .tit_wrap{
+        margin-bottom: 45px;
         *{display:inline-block;float:right;}
         .tit{margin-right: 10px;}
         span{
-            position: relative;font-size: 23px;margin-right: 50px;vertical-align: bottom;
+            position: relative;font-size: 23px;margin-right: 50px;margin-top: 63px;
             &::after{
                 @include cover;
                 @include transY-50;
@@ -64,7 +67,200 @@
             }
         }
     }
-    .wrap{background: $darkGray;}
+    .wrap{
+        background: $darkGray;color: #ffffff;padding: 100px 0;
+        .w1400{
+            @include flex;
+            justify-content: space-between;padding-bottom: 100px;
+            .programming,.design,.ect{width: calc(100% / 3);}
+        }
+        strong{
+            @include translate-50;
+            position: absolute;font-size: 26px;font-weight: 400;text-align: center;top: 50%;left: 50%;
+        }
+        .txt{
+            position: relative;height: 317px;margin-top: 47px;
+            &::before{
+                @include transX-50;
+                content:"";position: absolute;width: 3px;height: 317px;background: #ffffff;top: 0;left: 50%;
+            }
+            span{
+                position: absolute;font-size: 20px;
+                &::before{
+                    @include cover;
+                    @include transY-50;
+                    content: "";position: absolute;top: 50%;width: 59px;height: 10px;background: no-repeat;
+                }
+                &:nth-child(odd)::before{background: url("../images/aboutme/skill_right.svg");}
+                &:nth-child(even)::before{background: url("../images/aboutme/skill_left.svg");}
     
+            }
+        }    
+    }
+    .hexagon{
+        @include transX-50;
+        position: relative;width: 189px;height: 109px;margin-top: 47.25px;left: 50%;
+        &::before,&::after{content:"";position: absolute;width: 0;height: 0;left: 0;border-left: 94.5px solid transparent;border-right: 94.5px solid transparent;}
+        &::before{top: -47.25px;}
+        &::after{bottom: -47.25px;}
+    }
+    .programming{
+        .hexagon{
+            background: $yellow;
+            &::before{border-bottom: 47.25px solid $yellow;}
+            &::after{border-top: 47.25px solid $yellow;}
+        }
+        .txt{
+            span:nth-child(1){top: 37px;left: 106px;}
+            span:nth-child(2){top: 84px;left: 308px;}
+            span:nth-child(3){top: 128px;left: 113px;}
+            span:nth-child(4){top: 174px;left: 308px;}
+            span:nth-child(5){top: 218px;left: 45px;}
+            span:nth-child(6){top: 266px;left: 308px;}
 
+            span:nth-child(odd)::before{background: url("../images/aboutme/skill_left.svg");right: -71px;}
+            span:nth-child(even)::before{background: url("../images/aboutme/skill_right.svg");left:-75px;}
+        }
+    }
+    .design{
+        .hexagon{
+            background: $red;
+            &::before{border-bottom: 47.25px solid $red;}
+            &::after{border-top: 47.25px solid $red;}
+        }
+        .txt{
+            &::before{height: 200px;}
+            span:nth-child(1){top: 38px;left: 307px;}
+            span:nth-child(2){top: 82px;left: 131px;}
+            span:nth-child(3){top: 130px;left: 307px;}
+
+            span:nth-child(odd)::before{left:-75px}
+            span:nth-child(even)::before{right:-73px}
+        }
+    }
+    .ect{
+        .hexagon{
+            background: #0075A1;
+            &::before{border-bottom: 47.25px solid #0075A1;}
+            &::after{border-top: 47.25px solid #0075A1;}
+        }
+        .txt{
+            span:nth-child(1){top: 39px;left: 308px;}
+            span:nth-child(2){top: 91px;left: 44px;}
+            span:nth-child(3){top: 151px;left: 308px;}
+            span:nth-child(4){top: 238px;left: 91px;}
+
+            span:nth-child(odd)::before{left:-75px;}
+            span:nth-child(even)::before{right: -71px;}
+        }
+    }
+    #jump{
+        @include radius(100%);
+        position: absolute;width: 60px;height: 60px;left: 0;bottom: 0;background: $orange;font-size: 16px;text-align: center;line-height: 60px;
+    }
+    .guide,.keyboard div{
+        @include radius(5px);
+        position: absolute;background: #ffffff;
+    }
+    .guide{
+        width: 373px;height: 309px;left: 70px;bottom: 60px;
+        p{color: $darkGray;text-align: center;margin: 36px 0 30px;}
+        .keyboard{
+            div{border: 1px solid #eee;width: 60px;height: 60px;}
+            img{display:block;width: 26px;margin:23px auto;}
+            .up{top: 84px;left: calc(50% - 30px);}
+            .right{
+                @include transform(rotate(90deg));
+                top: 154px;right: 86px;
+            }
+            .down{
+                @include transform(rotate(180deg));
+                top: 154px;left: calc(50% - 30px);
+            }
+            .left{
+                @include transform(rotate(270deg));
+                top: 154px;left: 86px;
+            }
+            .spacebar{width: 200px;height: 50px;bottom: 35px;left:calc(50% - 100px);font-size: 23px;color: $gray;text-align: center;line-height: 50px;}
+        }
+    }
+    .movetxt{
+        margin-top: 89px;
+        marquee{font-size: 36px;}
+        .line{font-family: hopang;margin-top: 20px;}
+    }
+}
+
+//portfolio
+#cntA{
+    position: relative;height: 1080px;max-height: 1080px;
+    &::before,&::after{content:"";position: absolute;background: url("../images/common/color_dot.svg") no-repeat;height: 620px;width: 25px;}
+    &::before{top: 347px;right: 402px;}
+    &::after{top: 0;right: 211px;}
+    .right,.left{
+        @include transform(rotate(90deg));
+        position: absolute;font-size: 70px;
+    }
+    .right{
+        top: 333px;right: -47px;
+        &::after{content:"";position: absolute;width: 19px;height: 7px;background: $darkGray;top: 36px;right: -35px;}
+    }
+    .left{top: 710px;right: 50px;}
+    .loading{
+        position: absolute;width: 200px;height: 300px;left: 205px;
+        top: 400px;
+        .squareS,.squareL{
+            @include radius(2px);
+            position: absolute;
+        }
+        .squareS{
+            @include transX-50;
+            @include animation(cubeS 3s linear infinite);
+            top: 0;left:50%;width: 100px;height: 100px;background: #0075a1;
+        }
+        .squareL{
+            @include animation(cubeL 3s linear infinite);
+            bottom: 0;left: 0;width: 200px;height: 200px;background: $yellow;
+        }
+    }
+}
+@keyframes cubeS{
+    0%{
+        @include transform(translateX(-50px) translateY(180px) rotate(0deg));
+        width: 200px;height: 50px;
+    }
+    25%{
+        @include transform(translateX(0) translateY(-200px) rotate(90deg));
+    }
+    50%{
+        @include transform(translateX(0) translateY(-300px) rotate(180deg));
+        width: 100px;height: 100px;
+    }
+    75%{
+        @include transform(translateX(0) translateY(-200px) rotate(270deg));
+    }
+    100%{
+        @include transform(translateX(-50px) translateY(180px) rotate(360deg));
+        width: 200px;height: 50px;
+    }
+}
+@keyframes cubeL{
+    0%{
+        @include transform(translateX(-50px) translateY(180px) rotate(0deg));
+        width: 400px;height: 100px;
+    }
+    25%{
+        @include transform(translateX(0) translateY(-200px) rotate(-30deg));
+    }
+    50%{
+        @include transform(translateX(0) translateY(-300px) rotate(-90deg));
+        width: 200px;height: 200px;
+    }
+    75%{
+        @include transform(translateX(0) translateY(-200px) rotate(-135deg));
+    }
+    100%{
+        @include transform(translateX(-50px) translateY(180px) rotate(-180deg));
+        width: 400px;height: 100px;
+    }
 }
