@@ -1,3 +1,70 @@
 @charset "utf-8";
 @import "_var","_mixin","_function";
 
+.tit{font-family: hopang;font-size: 100px;}
+
+#me{
+    .tit{margin-bottom: 132px;}
+    .click1,.click2{font-size: 20px;color: $darkGray;}
+    .click1{text-align: center;margin-bottom: 52px;}
+    .click2{margin-bottom: 56px;}
+    .img_wrap{
+        position: relative;width: 664px;height: 647px;background: $orange;
+        img,.smile,button{@include cover;}
+        img,.smile{position: absolute;background: no-repeat center;}
+        img{width: 633px;top: -30px;right: 0;background-image: url("../assets/images/aboutme/me.png");}
+        .smile{z-index: 10;}
+        .smile1{
+            @include transform(rotate(145deg));
+            width: 67px;height: 67px;top: 158px;left: 193px;background-image: url("../assets/images/icon/smile_icon.svg");
+        }
+        .smile2{
+            @include transform(rotate(21deg));
+            width: 56px;height: 56px;top: 199px;left: 502px;background-image: url("../assets/images/icon/smile_icon.svg");
+        }
+        .smile3{
+            @include transform(rotate(-106deg));
+            width: 68px;height: 68px;top: 370px;left: 473px;background-image: url("../assets/images/icon/smile_icon.svg");
+        }
+        .smile4{
+            @include transform(rotate(-5deg));
+            width: 44px;height: 44px;top: 426px;left: 101px;background-image: url("../assets/images/icon/smile_icon.svg");
+        }
+        button{width: 86px;height: 86px;background: url("../assets/images/icon/q_mark.svg") no-repeat;}
+    }
+    .txt{
+        p{font-size: 80px;font-family: hopang;}
+    }
+    .text{background: gold;
+        position: absolute;width: 630px;right: 0;top: 454px;line-height: 32px;
+        p{font-size: 22px;word-break: keep-all;}
+        .txt1{padding-bottom: 30px;}
+        .txt2{padding-bottom: 100px;}
+        .txt3{padding-bottom: 409px;}
+    }
+    .video{
+        position: relative;height: 619px;margin: 81px 0 301px;
+        iframe{float: right;width: 1100px;height: 619px;}
+        a{
+            position: absolute;bottom: 0;left: 73px;font-size: 22px;
+            &:hover,&:focus{text-decoration: underline;}
+        }
+    }
+}
+#skill{
+    .tit_wrap{background: gold;
+        *{display:inline-block;float:right;}
+        .tit{margin-right: 10px;}
+        span{
+            position: relative;font-size: 23px;margin-right: 50px;vertical-align: bottom;
+            &::after{
+                @include cover;
+                @include transY-50;
+                content:"";position: absolute;background: url("../images/icon/v_icon.svg") no-repeat;top: 50%;right: -25px;width: 20px;height: 24px;
+            }
+        }
+    }
+    .wrap{background: $darkGray;}
+    
+
+}

@@ -3,21 +3,25 @@
 
 #cnt1{
     background: $lightGray;margin-top: 95px;
-    .img_wrap{display: none;
-        position: relative;width: 1400px;height: auto;margin: 0 auto;
+     background-image: url("../assets/images/main/mint_flower.svg"),url("../assets/images/main/red_flower.svg"),url("../assets/images/main/plus.svg"),url("../assets/images/main/triangle.svg"),url("../assets/images/main/red_flower.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 50px,105px 105px,32px 799px,110px 189px,65px 65px;
+    background-position: 1096px 243px,304px 50%,right bottom,1498px 80.8%,9.8% 102%;
+    .bg{
+        display:none;
         img{position: absolute;}
-        img:nth-child(1){width: 50px;height: 50px;top: 243px;left: 836px;}
-        img:nth-child(2){width: 105px;height: 105px;top: 50%;right: 44px;}
-        img:nth-child(3){width: 32px;height: 799px;bottom: 0;right: -234px;}
-        img:nth-child(4){bottom: 110px;right: -71px;}
-        img:nth-child(5){width: 65px;height: 65px;bottom: 72px;left: -44px;}
+        img:nth-child(1){width: 50px;height: 50px;top: 243px;left: 1096px;}
+        img:nth-child(2){width: 105px;height: 105px;top: 50%;right: 304px;}
+        img:nth-child(3){width: 32px;height: 799px;bottom: 0;right: 20px;}
+        img:nth-child(4){bottom: 110px;right: 189px;}
+        img:nth-child(5){width: 65px;height: 65px;bottom: 72px;left: 219px;}
     }
-    h2{
+     h2{
         @include transform(perspective(1000px) rotateY(50deg));
         font-size: 100px;margin: 100px 0 200px;margin: 0 auto;
     }
     p{
-        position: relative;color: $gray;text-align: center;margin-bottom: 33px;
+        position: relative;color: $gray;text-align: center;padding-bottom: 33px;
         &::before{
             @include transX-50;
             content: "";position: absolute;top: -150px;left: 50%;width: 2px;height: 100px;background: $gray;

@@ -1,37 +1,37 @@
 #cnt1 {
   background: #F4F4F4;
-  margin-top: 95px; }
-  #cnt1 .img_wrap {
-    display: none;
-    position: relative;
-    width: 1400px;
-    height: auto;
-    margin: 0 auto; }
-    #cnt1 .img_wrap img {
+  margin-top: 95px;
+  background-image: url("../assets/images/main/mint_flower.svg"), url("../assets/images/main/red_flower.svg"), url("../assets/images/main/plus.svg"), url("../assets/images/main/triangle.svg"), url("../assets/images/main/red_flower.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 50px,105px 105px,32px 799px,110px 189px,65px 65px;
+  background-position: 1096px 243px,304px 50%,right bottom,1498px 80.8%,9.8% 102%; }
+  #cnt1 .bg {
+    display: none; }
+    #cnt1 .bg img {
       position: absolute; }
-    #cnt1 .img_wrap img:nth-child(1) {
+    #cnt1 .bg img:nth-child(1) {
       width: 50px;
       height: 50px;
       top: 243px;
-      left: 836px; }
-    #cnt1 .img_wrap img:nth-child(2) {
+      left: 1096px; }
+    #cnt1 .bg img:nth-child(2) {
       width: 105px;
       height: 105px;
       top: 50%;
-      right: 44px; }
-    #cnt1 .img_wrap img:nth-child(3) {
+      right: 304px; }
+    #cnt1 .bg img:nth-child(3) {
       width: 32px;
       height: 799px;
       bottom: 0;
-      right: -234px; }
-    #cnt1 .img_wrap img:nth-child(4) {
+      right: 20px; }
+    #cnt1 .bg img:nth-child(4) {
       bottom: 110px;
-      right: -71px; }
-    #cnt1 .img_wrap img:nth-child(5) {
+      right: 189px; }
+    #cnt1 .bg img:nth-child(5) {
       width: 65px;
       height: 65px;
       bottom: 72px;
-      left: -44px; }
+      left: 219px; }
   #cnt1 h2 {
     -webkit-transform: perspective(1000px) rotateY(50deg);
     -moz-transform: perspective(1000px) rotateY(50deg);
@@ -45,7 +45,7 @@
     position: relative;
     color: #656565;
     text-align: center;
-    margin-bottom: 33px; }
+    padding-bottom: 33px; }
     #cnt1 p::before {
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
