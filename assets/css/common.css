@@ -23,7 +23,8 @@ img {
 
 button {
   background: none;
-  cursor: url("../images/icon/pointer.svg"), pointer !important; }
+  cursor: url("../images/icon/pointer.svg"), pointer !important;
+  font-family: inherit; }
 
 header, nav, section, article, footer {
   display: block; }
@@ -72,7 +73,8 @@ body {
   font-style: normal;
   font-size: 18px;
   color: #222222;
-  line-height: 1.2; }
+  line-height: 1.2;
+  word-break: keep-all; }
 
 #skip a {
   position: absolute;

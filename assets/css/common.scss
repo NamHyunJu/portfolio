@@ -9,7 +9,7 @@ a:link,a:visited,a:hover,a:active{color: inherit;text-decoration: none;}
 iframe,button,img{border: none;}
 button,img{vertical-align: middle;}
 img{max-width: 100%;}
-button{background: none;cursor: url("../images/icon/pointer.svg"),pointer !important;}
+button{background: none;cursor: url("../images/icon/pointer.svg"),pointer !important;font-family: inherit;}
 header,nav,section,article,footer{display: block;}
 
 //common class
@@ -24,7 +24,7 @@ header,nav,section,article,footer{display: block;}
 
 body{
     @include boxsizing;
-    font-family: jeju,NtSansKR,poppins,serif;font-weight: 400;font-style: normal;font-size: 18px;color: $darkGray;line-height: 1.2;
+    font-family: jeju,NtSansKR,poppins,serif;font-weight: 400;font-style: normal;font-size: 18px;color: $darkGray;line-height: 1.2;word-break: keep-all;
 }
 
 #skip a{

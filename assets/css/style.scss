@@ -39,7 +39,7 @@
     }
     .text{
         position: absolute;width: 630px;right: 0;top: 454px;line-height: 32px;
-        p{font-size: 22px;word-break: keep-all;}
+        p{font-size: 22px;}
         .txt1{padding-bottom: 30px;}
         .txt2{padding-bottom: 100px;}
         .txt3{padding-bottom: 409px;}
@@ -191,7 +191,50 @@
     }
 }
 
-//portfolio
+//project
+#projectCnt{
+    .tit{font-family: NtSnasKR;font-size: 36px;}
+    .subtit{font-size: 30px;}
+    .txt{
+        position: absolute;top: 153px;right: 0;width: 482px;background: gold;text-align: right;
+        .page,.text{font-size: 22px;}
+        .website,.role{font-size: 25px;}
+        .page{margin: 60px 0 39px;}
+        .website{margin-bottom: 10px;}
+        .text{line-height: 2;margin-top: 180px;}
+    }
+    .go_btn{
+        position: absolute;right: 0;top: 760px;
+        li{float: left;}
+        a{
+            @include cover;
+            @include boxsizing;
+            display:inline-block;font-size: 15px;width: 131px;height: 56px;
+        }
+        .sitego{color: #ffffff;background: url("../images/icon/sitego.svg") no-repeat;padding: 18px 0 0 12px;margin-right: 69px;}
+        .linkgo{color: $orange;background: url("../images/icon/infogo.svg") no-repeat;padding: 18px 0 0 19px;}
+    }
+    .img_wrap{
+        @include transY-50;background: gold;
+        position: absolute;left: 0;top: 50%;
+        .img{overflow: hidden;}
+        .controller{
+            button{
+                position: relative;font-size: 20px;
+                &::after{
+                    @include transY-50;
+                    content:"";position: absolute;top: 50%;
+                }
+            }
+            .next{
+                &::after{
+                    @include cover;
+                    right: -31px;background: url("../images/icon/next.svg") no-repeat;
+                }
+            }
+        }
+    }
+}
 #cntA{
     position: relative;height: 1080px;max-height: 1080px;
     &::before,&::after{content:"";position: absolute;background: url("../images/common/color_dot.svg") no-repeat;height: 620px;width: 25px;}
@@ -224,6 +267,14 @@
         }
     }
 }
+#jaenung{
+    background: $lightGray;height: 928px;
+    .w1400{height: 100%;}
+    .img_wrap{
+        .img{width: 778px;height: 389px;}
+    }
+}
+#what,#what_info,#kids,#kids_info{display:none;}
 @keyframes cubeS{
     0%{
         @include transform(translateX(-50px) translateY(180px) rotate(0deg));

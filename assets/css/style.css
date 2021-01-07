@@ -93,8 +93,7 @@
   top: 454px;
   line-height: 32px; }
   #me .text p {
-    font-size: 22px;
-    word-break: keep-all; }
+    font-size: 22px; }
   #me .text .txt1 {
     padding-bottom: 30px; }
   #me .text .txt2 {
@@ -385,6 +384,86 @@
     font-family: hopang;
     margin-top: 20px; }
 
+#projectCnt .tit {
+  font-family: NtSnasKR;
+  font-size: 36px; }
+#projectCnt .subtit {
+  font-size: 30px; }
+#projectCnt .txt {
+  position: absolute;
+  top: 153px;
+  right: 0;
+  width: 482px;
+  background: gold;
+  text-align: right; }
+  #projectCnt .txt .page, #projectCnt .txt .text {
+    font-size: 22px; }
+  #projectCnt .txt .website, #projectCnt .txt .role {
+    font-size: 25px; }
+  #projectCnt .txt .page {
+    margin: 60px 0 39px; }
+  #projectCnt .txt .website {
+    margin-bottom: 10px; }
+  #projectCnt .txt .text {
+    line-height: 2;
+    margin-top: 180px; }
+#projectCnt .go_btn {
+  position: absolute;
+  right: 0;
+  top: 760px; }
+  #projectCnt .go_btn li {
+    float: left; }
+  #projectCnt .go_btn a {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 15px;
+    width: 131px;
+    height: 56px; }
+  #projectCnt .go_btn .sitego {
+    color: #ffffff;
+    background: url("../images/icon/sitego.svg") no-repeat;
+    padding: 18px 0 0 12px;
+    margin-right: 69px; }
+  #projectCnt .go_btn .linkgo {
+    color: #FB511D;
+    background: url("../images/icon/infogo.svg") no-repeat;
+    padding: 18px 0 0 19px; }
+#projectCnt .img_wrap {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-animation: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: gold;
+  position: absolute;
+  left: 0;
+  top: 50%; }
+  #projectCnt .img_wrap .img {
+    overflow: hidden; }
+  #projectCnt .img_wrap .controller button {
+    position: relative;
+    font-size: 20px; }
+    #projectCnt .img_wrap .controller button::after {
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-animation: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      content: "";
+      position: absolute;
+      top: 50%; }
+  #projectCnt .img_wrap .controller .next::after {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    right: -31px;
+    background: url("../images/icon/next.svg") no-repeat; }
+
 #cntA {
   position: relative;
   height: 1080px;
@@ -459,6 +538,18 @@
       width: 200px;
       height: 200px;
       background: #FCAE26; }
+
+#jaenung {
+  background: #F4F4F4;
+  height: 928px; }
+  #jaenung .w1400 {
+    height: 100%; }
+  #jaenung .img_wrap .img {
+    width: 778px;
+    height: 389px; }
+
+#what, #what_info, #kids, #kids_info {
+  display: none; }
 
 @keyframes cubeS {
   0% {

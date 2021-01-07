@@ -2,23 +2,16 @@
 @import "_var","_mixin","_function";
 
 #cnt1{
-    background: $lightGray;margin-top: 95px;
-     background-image: url("../assets/images/main/mint_flower.svg"),url("../assets/images/main/red_flower.svg"),url("../assets/images/main/plus.svg"),url("../assets/images/main/triangle.svg"),url("../assets/images/main/red_flower.svg");
+    position: relative;background-color: $lightGray;padding-top: 96px;
+    background-image: url("../assets/images/main/mint_flower.svg"),url("../assets/images/main/plus.svg"),url("../assets/images/main/triangle.svg"),url("../assets/images/main/red_flower.svg");
     background-repeat: no-repeat;
-    background-size: 50px 50px,105px 105px,32px 799px,110px 189px,65px 65px;
-    background-position: 1096px 243px,304px 50%,right bottom,1498px 80.8%,9.8% 102%;
-    .bg{
-        display:none;
-        img{position: absolute;}
-        img:nth-child(1){width: 50px;height: 50px;top: 243px;left: 1096px;}
-        img:nth-child(2){width: 105px;height: 105px;top: 50%;right: 304px;}
-        img:nth-child(3){width: 32px;height: 799px;bottom: 0;right: 20px;}
-        img:nth-child(4){bottom: 110px;right: 189px;}
-        img:nth-child(5){width: 65px;height: 65px;bottom: 72px;left: 219px;}
-    }
+    background-size: 50px 50px,32px 799px,110px 189px,65px 65px;
+    background-position: 1096px 243px,right bottom,1498px 80.8%,9.8% 102%;
      h2{
-        @include transform(perspective(1000px) rotateY(50deg));
-        font-size: 100px;margin: 100px 0 200px;margin: 0 auto;
+        @include transform(perspective(1000px) rotateY(180deg));
+        @include transition(transform 3.5s);
+        position: relative;z-index: 1;font-size: 100px;margin: 100px 20px 200px;
+        &.on{@include transform(perspective(0px) rotateY(0deg));}
     }
     p{
         position: relative;color: $gray;text-align: center;padding-bottom: 33px;
@@ -26,6 +19,10 @@
             @include transX-50;
             content: "";position: absolute;top: -150px;left: 50%;width: 2px;height: 100px;background: $gray;
         }
+    }
+    .red_flower{
+        @include animation(flower 5s linear infinite);
+        position: absolute;width: 90px;height: 90px;top: 30%;right: 15.8%;
     }
 }
 #cnt2{
@@ -38,4 +35,8 @@
     text-align: center;
     p:nth-child(1){margin-top: 180px;}
     strong{display:block;font-size: 30px;font-weight: 400;background: #fff;width: 500px;border:5px solid #0BA9E9;background: #ffffff;padding: 56px 97.5px;margin: 90px auto 48px;}
+}
+
+@keyframes flower{
+    100%{@include transform(rotate(360deg));}
 }
