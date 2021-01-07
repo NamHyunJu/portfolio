@@ -24,33 +24,24 @@
         <article id="me">
             <div class="bg">
                 <img src="../assets/images/aboutme/dot_circle_bg.svg" alt="">
-                <img src="../assets/images/common/yellow_line.svg" alt="">
-                <img src="../assets/images/common/orange_bg.svg" alt="">
-                <img src="../assets/images/aboutme/bluesky_bg.svg" alt="">
-                <img src="../assets/images/common/color_dot.svg" alt="">
                 <img src="../assets/images/aboutme/dot_circle_bg.svg" alt="">
-                <img src="../assets/images/common/yellow_line.svg" alt="">
             </div>
             <div class="w1400 p_r">
                 <h2 class="tit">ABOUT ME</h2>
                 <p class="click1">물음표(?)를 클릭해주세요!</p>
                 <p class="click2">웃는 이모티콘을 클릭해주세요!</p>
-                
+
                 <div class="img_wrap">
                     <img src="../assets/images/aboutme/me.png" alt="분수대 앞에서 걸쳐 앉아있는 남현주">
-                    <button type="button"></button>
-                    <a href=".txt1" class="smile1 smile">
-                        <img src="../assets/images/icon/smile_icon.svg" alt="첫번째 텍스트와 연결된 웃는 얼굴 아이콘">
-                    </a>
-                    <a href=".txt2" class="smile2 smile">
-                        <img src="../assets/images/icon/smile_icon.svg" alt="두번째 텍스트와 연결된 웃는 얼굴 아이콘">
-                    </a>
-                    <a href=".txt3" class="smile3 smile">
-                        <img src="../assets/images/icon/smile_icon.svg" alt="세번째 텍스트와 연결된 웃는 얼굴 아이콘">
-                    </a>
-                    <a href=".txt4" class="smile4 smile">
-                        <img src="../assets/images/icon/smile_icon.svg" alt="네번째 텍스트와 연결된 웃는 얼굴 아이콘">
-                    </a>
+                    <button type="button" class="q"></button>
+                    <button type="button" class="smile1 smile" aria-controls="txt1">
+                    </button>
+                    <button type="button" class="smile2 smile" aria-controls="txt2">
+                    </button>
+                    <button type="button" class="smile3 smile" aria-controls="txt3">
+                    </button>
+                    <button type="button" class="smile4 smile" aria-controls="txt4">
+                    </button>
                 </div>
                 <div class="txt">
                     <p class="first">WHO ARE YOU</p>
@@ -58,12 +49,12 @@
                     <p class="last">WHO ARE YOU</p>
                 </div>
                 <div class="text">
-                    <p class="txt1">안녕하세요. 의미있는 가치를 만들고 싶은 웹퍼블리셔 남현주 입니다.</p>
-                    <p class="txt2">디지털미디어학과에서 UIUX를 전공하며 사용자에게 최적의 경험을 제공하기 위해서 어떻게 디자인을 해야하는 것인지  공부하였습니다.</p>
-                    <p class="txt3">이제는 웹퍼블리셔로서 탄탄한 코드로 디자인을 해보려합니다.<br>
+                    <p id="txt1">안녕하세요. 의미있는 가치를 만들고 싶은 웹퍼블리셔 남현주 입니다.</p>
+                    <p id="txt2">디지털미디어학과에서 UIUX를 전공하며 사용자에게 최적의 경험을 제공하기 위해서 어떻게 디자인을 해야하는 것인지  공부하였습니다.</p>
+                    <p id="txt3">이제는 웹퍼블리셔로서 탄탄한 코드로 디자인을 해보려합니다.<br>
                         항상 사용자 입장에서 먼저 생각하고,<br>
                         사용자의 기억에서 오래 남을 수 있는 웹사이트를 만들겠습니다.</p>
-                    <p class="txt4">원래 여행이나 야외활동을 좋아하는데 코로나19 사태로 인해 집에 있는 시간이 많아지면서 '영상 만들기'와 '비즈 공예'라는 새로운 취미를 갖게되었습니다.</p>
+                    <p id="txt4">원래 여행이나 야외활동을 좋아하는데 코로나19 사태로 인해 집에 있는 시간이 많아지면서 '영상 만들기'와 '비즈 공예'라는 새로운 취미를 갖게되었습니다.</p>
                 </div>
                 <div class="video">
                     <iframe src="https://youtu.be/DEnpLPTmMi0" title="도형을 활용한 모션그래픽">이 브라우저는 iframe을 지원하지 않습니다</iframe>
@@ -76,8 +67,8 @@
                 <h2 class="tit">SKILL</h2>
                 <span>제가 잘하는 일을 소개합니다</span>
             </div>
-            <div class="wrap">
-                <div class="w1400 p_r">
+            <div class="wrap p_r">
+                <div class="w1400">
                     <div class="programming">
                         <div class="hexagon">
                             <strong>Programming Language</strong>

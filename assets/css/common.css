@@ -149,7 +149,8 @@ body {
   display: none;
   position: fixed;
   top: 0;
-  left: 0; }
+  right: -100%;
+  z-index: 10; }
   #gnb ul {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
