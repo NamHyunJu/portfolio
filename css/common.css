@@ -1,9 +1,3 @@
-/* @mixin keyframes($name,$value...){
-    -webkit-@keyframes $name {$value};
-    -moz-@keyframes $name {$value};
-    -o-@keyframes $name {$value};
-    @keyframes $name {$value};
-} */
 body, h1, h2, h3, h4, ul, p, img, button {
   margin: 0;
   padding: 0; }
@@ -128,7 +122,7 @@ body {
   #header .email {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
-    -o-animation: rotate(90deg);
+    -o-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     transform-origin: top right;
@@ -160,7 +154,7 @@ body {
   #gnb ul {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
-    -o-animation: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;

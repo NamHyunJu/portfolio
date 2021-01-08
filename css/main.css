@@ -1,9 +1,3 @@
-/* @mixin keyframes($name,$value...){
-    -webkit-@keyframes $name {$value};
-    -moz-@keyframes $name {$value};
-    -o-@keyframes $name {$value};
-    @keyframes $name {$value};
-} */
 #cnt1 {
   position: relative;
   background-color: #F4F4F4;
@@ -15,7 +9,7 @@
   #cnt1 h2 {
     -webkit-transform: perspective(1000px) rotateY(180deg);
     -moz-transform: perspective(1000px) rotateY(180deg);
-    -o-animation: perspective(1000px) rotateY(180deg);
+    -o-transform: perspective(1000px) rotateY(180deg);
     -ms-transform: perspective(1000px) rotateY(180deg);
     transform: perspective(1000px) rotateY(180deg);
     -webkit-transition: transform 3.5s;
@@ -28,7 +22,7 @@
     #cnt1 h2.on {
       -webkit-transform: perspective(0px) rotateY(0deg);
       -moz-transform: perspective(0px) rotateY(0deg);
-      -o-animation: perspective(0px) rotateY(0deg);
+      -o-transform: perspective(0px) rotateY(0deg);
       -ms-transform: perspective(0px) rotateY(0deg);
       transform: perspective(0px) rotateY(0deg); }
   #cnt1 p {
@@ -39,7 +33,7 @@
     #cnt1 p::before {
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
-      -o-animation: translateX(-50%);
+      -o-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       content: "";
@@ -84,7 +78,7 @@
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
-    -o-animation: rotate(360deg);
+    -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 

@@ -8,12 +8,15 @@
         @include animation(rotate 60s linear infinite);
     }
     .tit{margin: 0 0 132px 10px;}
-    .click1,.click2{font-size: 20px;color: $gray;}
+    .click1,.click2{
+        @include animation(updown 1.5s infinite);
+        font-size: 20px;color: $gray;transform-origin: 50% 50%;
+    }
     .click1{
         @include transX-50;
         position: absolute;top: 150px;left: 50%;
     }
-    .click2{margin-bottom: 56px;margin-left: 218px;}
+    .click2{position: absolute;left: 340px;top: 150px;}
     
     .img_wrap{
         position: relative;width: 664px;height: 647px;background: $orange;z-index:1;
@@ -77,9 +80,7 @@
         }
     }
 }
-@keyframes rotate{
-    100%{@include transform(rotate(360deg));}
-}
+
 #skill{
     .tit_wrap{
         margin-bottom: 45px;
@@ -366,6 +367,7 @@
 
 #jaenung,#jaenung_info{background: $lightGray;}
 #jaenung{
+    z-index:3;
     .w1400{height: 100%;}
     .img_wrap{
         .img{width: 778px;height: 389px;}
@@ -415,13 +417,22 @@
 
 #what,#what_info{background: $darkGray;}
 #what{
+    z-index:2;
 }
 
 #kids,#kids_info{background: #0252A6;}
 #kids{
+    z-index:1;
 }
-
-@keyframes cubeS{
+@include keyframes(rotate){
+    100%{@include transform(rotate(360deg));}
+}
+@include keyframes(updown){
+    0%{@include transform(scale(0.9) translateX(-50%));}
+    50%{@include transform(scale(1) translateX(-50%));}
+    100%{@include transform(scale(0.9) translateX(-50%));}
+}
+@include keyframes(cubeS){
     0%{
         @include transform(translateX(-50px) translateY(180px) rotate(0deg));
         width: 200px;height: 50px;
@@ -441,7 +452,7 @@
         width: 200px;height: 50px;
     }
 }
-@keyframes cubeL{
+@include keyframes(cubeL){
     0%{
         @include transform(translateX(-50px) translateY(180px) rotate(0deg));
         width: 400px;height: 100px;
@@ -461,7 +472,7 @@
         width: 400px;height: 100px;
     }
 }
-@keyframes flash{
-	from{opacity:0}
-	to{opacity:1}
+@include keyframes(flash){
+    0%{opacity:0}
+	100%{opacity:1}
 }
