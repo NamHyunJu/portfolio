@@ -63,3 +63,9 @@
     -o-animation:$value;
     animation:$value;
 }
+/* @mixin keyframes($name,$value...){
+    -webkit-@keyframes $name {$value};
+    -moz-@keyframes $name {$value};
+    -o-@keyframes $name {$value};
+    @keyframes $name {$value};
+} */

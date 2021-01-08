@@ -1,3 +1,9 @@
+/* @mixin keyframes($name,$value...){
+    -webkit-@keyframes $name {$value};
+    -moz-@keyframes $name {$value};
+    -o-@keyframes $name {$value};
+    @keyframes $name {$value};
+} */
 body, h1, h2, h3, h4, ul, p, img, button {
   margin: 0;
   padding: 0; }
@@ -178,7 +184,7 @@ body {
   #footer .link a {
     font-size: 20px; }
     #footer .link a + a {
-      margin-left: 24px; }
+      margin-left: 150px; }
     #footer .link a:hover, #footer .link a:focus {
       text-decoration: underline; }
 

@@ -17,15 +17,19 @@
     
     .img_wrap{
         position: relative;width: 664px;height: 647px;background: $orange;z-index:1;
-        img,button,.q{@include cover;}
+        &.on{//초기화면
+            @include transX-50;
+            left:50%;
+        }
+        &.on::after{content:"";position: absolute;top: -30px;left: 0;background: $orange;opacity: 98%;width: 100%;height: calc(100% + 30px);}
+        img,button{@include cover;}
         .q{
             @include translate-50;
-            position: absolute;top: 50%;left: 50%;z-index:10;width: 86px;height: 86px;background: url("../assets/images/icon/q_mark.svg") no-repeat;
+            position: absolute;top: calc(50% - 15px);left: 50%;z-index:10;background: url("../images/icon/q_mark.svg") no-repeat;width: 86px;height: 130.5px;
         }
         img,.smile{position: absolute;}
         >img{
             display: inline-block;width: 633px;top: -30px;right: 0;background: no-repeat center;
-            &::after{content:"";position: absolute;top: 0;left: 0;background: $orange;opacity: 98%;}
         }
         .smile{background: url("../images/icon/smile_icon.svg") no-repeat;}
         .smile1{
@@ -44,10 +48,7 @@
             @include transform(rotate(-5deg));
             width: 44px;height: 44px;top: 426px;left: 101px;
         }
-        &.on{
-            @include transX-50;
-            left:50%;
-        }
+        
     }
     .txt{
         position: absolute;top: 858px;right: 0;width: 701px;
@@ -56,7 +57,7 @@
         .mid{padding-left: 107px;}
     }
     .text{
-        position: absolute;width: 630px;right: 0;top: 454px;line-height: 32px;
+        position: absolute;width: 630px;right: 0;top: 310px;line-height: 32px;
         p{position: relative;font-size: 22px;}
         #txt1{margin-bottom: 30px;}
         #txt2{margin-bottom: 100px;}
@@ -182,7 +183,7 @@
     }
     #jump{
         @include radius(100%);
-        position: absolute;width: 60px;height: 60px;left: 30px;bottom: 30px;background: $orange;font-size: 16px;text-align: center;line-height: 60px;
+        position: absolute;width: 60px;height: 60px;left: 30px;bottom: 30px;background: $orange;font-size: 16px;text-align: center;line-height: 60px;cursor: pointer;
     }
     .guide,.keyboard div{
         @include radius(5px);
@@ -192,7 +193,10 @@
         width: 373px;height: 309px;left: 100px;bottom: 90px;
         p{color: $darkGray;text-align: center;margin: 36px 0 30px;}
         .keyboard{
-            div{border: 1px solid #eee;width: 60px;height: 60px;}
+            div{
+                border: 1px solid #eee;width: 60px;height: 60px;
+                &.click{@include animation(flash 1s 0.8s infinite alternate)};
+            }
             img{display:block;width: 26px;margin:23px auto;}
             .up{top: 84px;left: calc(50% - 30px);}
             .right{
@@ -219,10 +223,11 @@
 
 //project
 #projectCnt{
+    position: relative;height: 2040px;
     .tit{font-family: NtSnasKR;font-size: 36px;}
     .subtit{font-size: 30px;}
     .txt{
-        position: absolute;top: 153px;right: 0;width: 482px;background: gold;text-align: right;
+        position: absolute;top: 153px;right: 0;width: 482px;text-align: right;
         .page,.text{font-size: 22px;}
         .website,.role{font-size: 25px;}
         .page{margin: 60px 0 39px;}
@@ -241,7 +246,7 @@
         .linkgo{color: $orange;background: url("../images/icon/infogo.svg") no-repeat;padding: 18px 0 0 19px;}
     }
     .img_wrap{
-        @include transY-50;background: purple;
+        @include transY-50;
         position: absolute;left: 0;top: 50%;text-align: center;width: 778px;height: 507px;
 
         .img{position: absolute;overflow: hidden;left: 0;bottom: 0;}
@@ -267,8 +272,9 @@
 //info 
 #projectCnt .info{
     .tit+p,.subtit,.color>strong,.color>p,.font>strong,.font>p{text-align: center;}
+    .tit+p{font-size: 20px;}
     .color>strong,.color>p,.font>strong,.font>p{color: $gray;}
-    .color>strong,.font>strong{position: relative;display: block;}
+    .color>strong,.font>strong{position: relative;display: block;font-weight: 400;}
     .color>strong::after,.font>strong::after{
         @include transX-50;
         content:"";position: absolute;bottom: -30px;left: 50%;width: 20px;height: 1px;background: $gray;
@@ -277,18 +283,18 @@
         .subtit{margin-bottom: 86px;}
         .color>p,.font>p{margin: 65px 0 41px;}
         .color{
-            ul{background: gold;text-align: center;height: 150px;}
+            ul{text-align: center;height: 150px;width: 520px;margin: 0 auto;}
             li{
                 @include radius(100%);
-                display: inline-block;width: 150px;height: 150px;color: #ffffff;font-size: 30px;line-height: 150px;
-                &+li{margin-left: 37px;}
+                float: left;width: 150px;height: 150px;color: #ffffff;font-size: 30px;line-height: 150px;
+                &+li{margin-left: 35px;}
             }
         }
         .font{
             .title,.f_name{font-size: 23px;}
             .f_name{color: $gray;}
             .big,.small{font-weight: 700;}
-            .big{font-size: 65px;}
+            .big{font-size: 65px;margin: 20px 0;}
             .small{font-size: 55px;}
         }
     }
@@ -352,13 +358,19 @@
         }
     }
 }
+
+.project{position: absolute;top: 1080px;left: 0;width: 100%;height: 960px;}
+#what,#kids{
+    .w1400{height: 100%;}
+}
+
 #jaenung,#jaenung_info{background: $lightGray;}
 #jaenung{
-    height: 928px;
     .w1400{height: 100%;}
     .img_wrap{
         .img{width: 778px;height: 389px;}
     }
+    
 }
 #jaenung_info{
     height: 2700px;
@@ -379,12 +391,36 @@
                 }
             }
         }
+        .font{
+            margin-top: 83px;
+            &>div{
+                @include flex;
+                justify-content: space-between;text-align: center;
+            }
+            .left{
+                .big,.small{font-family: jalnan;}
+                .big{color: #e60417;}
+                .small{color:#E34B58;}
+            }
+            .right{
+                .big,.small{font-family: NtSansKR;}
+                .big{color:#FF7800;}
+                .small{color:#F6AB74;}
+            }
+        }
     }
 
     .sitego{bottom: 200px;}
 }
 
-#what,#what_info,#kids,#kids_info{display:none;}
+#what,#what_info{background: $darkGray;}
+#what{
+}
+
+#kids,#kids_info{background: #0252A6;}
+#kids{
+}
+
 @keyframes cubeS{
     0%{
         @include transform(translateX(-50px) translateY(180px) rotate(0deg));
@@ -424,4 +460,8 @@
         @include transform(translateX(-50px) translateY(180px) rotate(-180deg));
         width: 400px;height: 100px;
     }
+}
+@keyframes flash{
+	from{opacity:0}
+	to{opacity:1}
 }

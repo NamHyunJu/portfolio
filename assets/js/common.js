@@ -1,30 +1,27 @@
 $(document).ready(function(){
     $('.head').load('../header.html .header');
 
-    var _gnb=$('#header #gnb');
-    var _openBtn=$('.gnb_open_btn');
-    var _closeBtn=$('.gnb_close_btn');
-
-    _openBtn.on('click',function(){
-        _gnb.css('display','block').stop().animate({right:0},300,function(){
+    //동적생성일때는 이벤트를 불러오는것이 다르다->$(document).on('event',선택자,function(){})
+    $(document).on('click', '.gnb_open_btn', function () {
+        $('#header #gnb').css('display','block').stop().animate({right:0},500,function(){
             $(this).find('.first').focus();
-            $('.first').on('keydown',function(e){
+            $('#gnb .first').on('keydown',function(e){
                 if(e.shiftKey&&e.keyCode===9){
-                    $('.last').focus();
+                    $('#gnb .last').focus();
                     return false;
                 }
             });
-            $('.last').on('keydown',function(){
+            $('#gnb .last').on('keydown',function(e){
                 if(!e.shiftKey&&e.keyCode===9){
-                    $('.first').focus();
+                    $('#gnb .first').focus();
                     return false;
                 }
             });
         });
     });
-    _closeBtn.on('click',function(){
-        _gnb.css('display','none').stop().animate({right:'-100%'},300,function(){
-            _openBtn.focus();
+    $(document).on('click', '.gnb_close_btn', function () {
+        $('#header #gnb').stop().animate({right:'-100%'},500,function(){
+            $('.gnb_open_btn').focus();
         });
     });
 });
