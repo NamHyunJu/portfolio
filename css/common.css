@@ -1,0 +1,191 @@
+/* @mixin keyframes($name,$value...){
+    -webkit-@keyframes $name {$value};
+    -moz-@keyframes $name {$value};
+    -o-@keyframes $name {$value};
+    @keyframes $name {$value};
+} */
+body, h1, h2, h3, h4, ul, p, img, button {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4 {
+  font-size: 100%; }
+
+ul {
+  list-style: none; }
+
+a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none; }
+
+iframe, button, img {
+  border: none; }
+
+button, img {
+  vertical-align: middle; }
+
+img {
+  max-width: 100%; }
+
+button {
+  background: none;
+  cursor: url("../images/icon/pointer.svg"), pointer !important;
+  font-family: inherit; }
+
+header, nav, section, article, footer {
+  display: block; }
+
+.f_l {
+  float: left; }
+
+.f_r {
+  float: right; }
+
+.p_r {
+  position: relative; }
+
+.p_a {
+  position: absolute; }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block; }
+
+.blind {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  border: none;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%); }
+
+.w1400 {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.f_orange {
+  color: #FB511D; }
+
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: jeju,NtSansKR,poppins,serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #222222;
+  line-height: 1.2;
+  word-break: keep-all; }
+
+#skip a {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  background: #FB511D;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  z-index: 1000; }
+  #skip a:focus {
+    left: 0; }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  z-index: 1000; }
+  #header .logo a {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    font-size: 30px;
+    background: #F9DCA2;
+    width: 268px;
+    height: 39px;
+    line-height: 39px;
+    font-weight: 400;
+    text-align: center; }
+  #header .gnb_open_btn {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    position: absolute;
+    top: 18px;
+    right: 80px;
+    background: url("../images/icon/nav.svg") no-repeat center;
+    width: 60px;
+    height: 60px; }
+  #header .email {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-animation: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: top right;
+    position: absolute;
+    right: 20px;
+    top: 260%;
+    font-size: 16px; }
+
+.gnb {
+  width: 100%;
+  height: 100%;
+  background: #012875;
+  text-align: center; }
+  .gnb li a {
+    color: #ffffff;
+    font-family: NtSansKR;
+    font-weight: 700;
+    font-size: 100px;
+    width: 100%; }
+    .gnb li a:hover, .gnb li a:focus {
+      text-decoration: underline; }
+
+#gnb {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 10; }
+  #gnb ul {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-animation: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+    #gnb ul li + li {
+      margin-top: 50px; }
+  #gnb .gnb_close_btn {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    position: absolute;
+    top: 77px;
+    right: 77px;
+    background: url("../images/icon/close_btn.svg") no-repeat center;
+    width: 82px;
+    height: 82px; }
+
+#footer .link {
+  margin: 277px 0 80px; }
+  #footer .link a {
+    font-size: 20px; }
+    #footer .link a + a {
+      margin-left: 150px; }
+    #footer .link a:hover, #footer .link a:focus {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=common.css.map */
