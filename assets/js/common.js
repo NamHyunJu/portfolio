@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.head').load('../../header.html .header');
+    $('.head').load('../header.html .header');
 
     var _gnb=$('#header #gnb');
     var _openBtn=$('.gnb_open_btn');
