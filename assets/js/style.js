@@ -7,7 +7,8 @@ $(document).ready(function(){
     var jump=150;
     var _guide=$('.guide');
     var _keyboard=_guide.find('.keyboard');
-    var one,two,three=false;
+    var one,two,three,chk=false;
+    var timer=0;
 
     //about me
     //초기화면
@@ -38,66 +39,55 @@ $(document).ready(function(){
     current=start;
     end=_window.width()-_jump.width()-30;
 
-    var timer=0;
-    
-    //특정위치에서만 연습 1번 시켜준다.
     _window.on('scroll',function(){
-        var chk=false;
+        
         var scrollT=$(this).scrollTop();
         var skillP=$(document).height()-$('#me').height();
         clearTimeout(timer);
         timer=setTimeout(function(){
-            if(skillP+500<=scrollT && !practice){
-                practice();
-                chk=true;
-                
-            }
+            if(skillP+500<=scrollT && !chk){chk=true;}
         },50);
     });
-    //키보드를 눌렀다 떼야 .click이 되도록하기위해 keyup 이벤트 사용
-    //keydown을 쓰면 방향키를 누른상태에서 .click이 추가되거나 삭제됨
-    function practice(e){
-        alert('a');
-        _window.on('keyup',function(){
-            if(e.keyCode===39 && !one && !two && !three & chk){
+    _window.on({
+        'keyup':function(e){
+            if(e.keyCode===39 && !one && !two && !three && chk){
                 _keyboard.find('.right').removeClass('click').siblings('.left').addClass('click');
                 one=true;
                 current+=step;
                 _jump.css({left:current});
 
-            } else if(e.keyCode===37 && one && !two && !three & chk){
+            } else if(e.keyCode===37 && one && !two && !three && chk){
                 _keyboard.find('.left').removeClass('click').siblings('.spacebar').addClass('click');
                 two=true;
                 current-=step;
                 _jump.css({left:current});
-            } else if(e.keyCode===32 && one && two && !three & chk){
+            } else if(e.keyCode===32 && one && two && !three && chk){
                 e.preventDefault();
                 _keyboard.find('.spacebar').removeClass('click');
                 _jump.stop().animate({bottom:jump},300,function(){
                     $(this).stop().animate({bottom:30},800,'easeOutBounce');
                     _guide.stop().delay(1000).slideUp('fast');
+                    three=true;
                 });
             }
-        });
-        
-    }
-    _window.on('keydown',function(e){
-            if(e.keyCode===39 && current<=end){//오른쪽 방향키 눌렀을때
+        },
+        'keydown':function(e){
+            if(e.keyCode===39 && current<=end && three){//오른쪽 방향키 눌렀을때
                 current+=step;
                 _jump.css({left:current});
             }
-            if(e.keyCode===37 && current>=start){//왼쪽 방향키 눌렀을때
+            if(e.keyCode===37 && current>=start && three){//왼쪽 방향키 눌렀을때
                 current-=step;
                 _jump.css({left:current});
             }
-            if(e.keyCode===32){//스페이스바 눌렀을때
+            if(e.keyCode===32 && three){//스페이스바 눌렀을때
                 e.preventDefault();
                 _jump.stop().animate({bottom:jump},300,function(){
                     $(this).stop().animate({bottom:30},800,'easeOutBounce');
                 });
             }
+        }
     });
-    
     
     //project
     $('#what #kids').stop().slideUp();
