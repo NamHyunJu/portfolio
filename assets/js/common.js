@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $('.head').load('../header.html .header');
+    $('.head').load('../common.html .header');
+    $('#footer').load('../common.html .link');
 
     //동적생성일때는 이벤트를 불러오는것이 다르다->$(document).on('event',선택자,function(){})
     $(document).on('click', '.gnb_open_btn', function () {
@@ -20,7 +21,7 @@ $(document).ready(function(){
         });
     });
     $(document).on('click', '.gnb_close_btn', function () {
-        $('#header #gnb').stop().animate({right:'-100%'},500,function(){
+        $('#header #gnb').stop().animate({right:'-200%'},500,function(){
             $('.gnb_open_btn').focus();
         });
     });
