@@ -9,7 +9,7 @@ a:link,a:visited,a:hover,a:active{color: inherit;text-decoration: none;}
 iframe,button,img{border: none;}
 button,img{vertical-align: middle;}
 img{max-width: 100%;}
-button{background: none;cursor: url("../images/icon/pointer.svg"),pointer !important;font-family: inherit;}
+button{background: none;cursor: pointer;font-family: inherit;}
 header,nav,section,article,footer{display: block;}
 
 //common class
@@ -37,7 +37,7 @@ body{
     .logo a{top: 28px;left: 20px;font-size: 30px;background: #F9DCA2;width: 268px;height: 39px;line-height: 39px;font-weight: 400;text-align: center;}
     .gnb_open_btn{
         @include bgsize(cover);
-        top: 18px;right: 80px;background: url("../images/icon/nav.svg") no-repeat center;width: 60px;height: 60px;
+        top: 16px;right: 82px;background: url("../images/icon/nav.svg") no-repeat center;width: 70px;height: 70px;
     }
     .email{
         @include transform(rotate(90deg));
@@ -52,8 +52,13 @@ body{
         position: absolute;left: 0;width: 695px;height: 613px;
     }
     li a{
-        color: #ffffff;font-family: NtSansKR;font-weight: 700;font-size: 100px;width: 100%;
-        &:hover,&:focus{text-decoration: underline;}
+        position: relative;color: #ffffff;font-family: NtSansKR;font-weight: 700;font-size: 100px;width: 100%;
+        &::after{
+            @include transition(width 0.3s ease 0s, left 0.3s ease 0s);
+            content: "";position: absolute;left: 50%;bottom: 0;height: 10px;width: 0;
+            background: #ffffff;
+        }
+        &:hover::after,&:focus::after{width: 100%;left: 0;}
     }
 }
 #gnb{

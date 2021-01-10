@@ -1,11 +1,11 @@
 #cnt1 {
   position: relative;
-  background-color: #F4F4F4;
+  background: #F4F4F4;
   padding-top: 96px;
-  background-image: url("../assets/images/main/mint_flower.svg"), url("../assets/images/main/plus.svg"), url("../assets/images/main/triangle.svg"), url("../assets/images/main/red_flower.svg");
+  background-image: url("../images/main/mint_flower.svg"), url("../images/main/plus.svg"), url("../images/main/triangle.svg"), url("../images/main/red_flower.svg");
   background-repeat: no-repeat;
-  background-size: 50px 50px,32px 799px,110px 189px,65px 65px;
-  background-position: 1096px 243px,right bottom,1498px 80.8%,9.8% 102%; }
+  background-position: 896px 243px,1862px 280px,1386px 777px,219px 800px;
+  background-size: 50px,32px 799px,245px 97px,65px; }
   #cnt1 h2 {
     -webkit-transform: perspective(1000px) rotateY(180deg);
     -moz-transform: perspective(1000px) rotateY(180deg);
@@ -55,9 +55,11 @@
     right: 15.8%; }
 
 #cnt2 .gnb {
+  position: relative;
+  overflow: hidden;
   padding: 228px 0; }
   #cnt2 .gnb .blob {
-    top: 954.6px; }
+    top: 0; }
 #cnt2 #indexGnb {
   position: relative; }
   #cnt2 #indexGnb li + li {

@@ -4,7 +4,7 @@
 //about me
 #me .tit,#skill .tit{font-family: hopang;font-size: 100px;}
 #me{
-    position: relative;top: 96px;
+    position: relative;top: 96px;background-repeat: no-repeat;background-image: url("../images/common/yellow_line.svg"),url("../images/common/orange_bg.svg"),url("../images/common/yellow_line.svg"),url("../images/aboutme/bluesky_bg.svg");background-position: 1090px 250px,1570px 422px,1474px 1057px,150px 1168px;
     .bg img{
         @include animation(rotate 60s linear infinite);
         position: absolute;
@@ -65,6 +65,7 @@
     }
     .text{
         position: absolute;width: 630px;right: 0;top: 310px;line-height: 32px;
+        &::before{content:"";position: absolute;background: url("../images/common/color_dot.svg") no-repeat;width: 25px;height: 520px;left: -51px;bottom: -35%;}
         p{position: relative;font-size: 22px;}
         #txt1{margin-bottom: 30px;}
         #txt2{margin-bottom: 100px;}
@@ -228,7 +229,8 @@
 
 //project
 #projectCnt{
-    position: relative;height: 2040px;
+    position: relative;
+    &.p_cnt{height: 2040px;}
     .tit{font-family: NtSnasKR;font-size: 36px;}
     .subtit{font-size: 30px;}
     .txt{
@@ -448,7 +450,6 @@
 }
 #what_info{
     &,.color>strong,.color>p,.font>strong,.font>p,.left .f_name,.right .f_name{color: #ffffff;}
-    .w1400{border: 1px solid gold;}
     .tit{margin-bottom: 60px;}
     .subtit+p{text-align: center;margin: 30px 0 190px;}
     .color>strong::after,.font>strong::after{background: #ffffff;}
@@ -483,11 +484,12 @@
     .coding{
         margin: 220px 0 650px;
         .flex p{text-align: left;}
+        .circle{top: 60px;}
     }
     .sitego{bottom: 200px;}
 }
 
-#kids,#kids_info{background: #0252A6;}
+#kids{background: #0252A6;}
 #kids{
     z-index:1;
     .txt{
@@ -499,7 +501,134 @@
         .img{width: 718px;height: 449px;}
     }
 }
+#kids_info{
+    .cnt1{
+        margin-top: 50px;
+        li{
+            float: left;width: 450px;height: 281px;
+            &+li{margin-left: 25px;}
+        }
+        .subtit{margin: 45px 0 30px;}
+    }
+    .feature{
+        .subtit{margin: 120px 0 40px;}
+        ul{width: 1028px;margin: 0 auto;}
+        li{
+            float: left;width: 182px;
+            &+li{margin-left: 100px;}
+            img{display: inline-block;height: 182px;}
+            p{text-align: center;line-height: 27px;margin-top: 18px;}
+        }
+    }
+    .flow{
+        .subtit{margin: 160px 0 50px;}
+        div{text-align: center;}
+    }
+    .design{
+        .subtit{margin: 160px 0 70px;}
+        >div{float: left;}
+        .color>strong,.color>p:nth-child(2),.font>strong,.font>p{display: inline-block;}
+        .color>strong::after,.font>strong::after{
+            @include transform(translateX(50%));
+            @include transY-50;
+            top: 50%;bottom: 0;left: 66px;width: 100px;
+        }
+        .color>p:nth-child(2),.font>p{margin: 0;margin-left: 135px;}
+        .color>p:nth-child(3),.color>p:nth-child(5){margin: 45px 0 15px;}
+        .color{
+            text-align: left;width: 580px;
+            .main{
+                width: 335px;
+                li{
+                    &:nth-child(1){background: #FFAF45;color: #bf6e02;}
+                    &:nth-child(2){background: #2fbcd1;color: #006473;}
+                }
+            }
+            .sub{
+                height: 130px;width: 580px;
+                li{
+                    width: 130px;height: 130px;font-size: 23px;line-height: 130px;
+                    &+li{margin-left: 20px;}
+                    &:nth-child(1){background: #64b742;color: #237A00;}
+                    &:nth-child(2){background: #f6c337;color: #907100;}
+                    &:nth-child(3){background: #ea461f;color: #7A1700;}
+                    &:nth-child(4){background: #bc662b;color: #532B00;}
+                }
+            }
+        }
+        .font{
+            width: 757px;margin: 106px 0 0 63px;
+            .left,.right{padding: 0;text-align: center;}
+            .left{
+                .big,.small{font-family: jalnan;}
+                .big{color: #FFBA1F;}
+                .small{color:#FFCB64;}
+            }
+            .right{
+                .big,.small{font-family: NtSansKR;}
+                .big{color:#C46311;}
+                .small{color:#DF8340;}
+            }
+        }
+    }
+    .parish{
+        .subtit{margin: 159px 0 80px;}
+        >div{
+            &.one,&.two{
+                @include flex;
+                justify-content: space-between;
+            }
+            p{line-height: 2;font-size: 22px;}
+            &.three,&.four,.img_wrap{position: relative;}
+            img{position: absolute;}
 
+        }
+        .one{
+            height: 516px;
+            .txt{
+                position:static;
+                p{text-align: left;}
+                p:nth-child(2){margin: 156px 0 51px;}
+            }
+            .img_wrap{
+                img{
+                    &:nth-child(1){top: 0;left: 0;}
+                    &:nth-child(2){bottom: 0;right: 0;}
+                }
+            }
+        }
+        .two{
+            margin: 156px 0 100px;height: 356px;
+            p{display: inline-block;margin-top: 122px;}
+            .img_wrap{
+                height: 100%;
+                img:nth-child(1){top: 0;left: 0;}
+                img:nth-child(2){top: 43px;right: 0;}
+                img:nth-child(3){bottom: 43px;left: 0;}
+                img:nth-child(4){bottom: 0;right: 0;}
+            }
+        }
+        .three{
+            height: 515px;margin-bottom: 253px;
+            p{position: absolute;top: 199px;right: 95px;width: 415px;}
+            .img_wrap{
+                height: 100%;
+                img:nth-child(1){top: 0;left: 0;}
+                img:nth-child(2){
+                    @include translate-50;
+                    top: 50%;left: 50%;
+                }
+                img:nth-child(3){bottom: 0;right: 0;}
+            }
+        }
+        .four{
+            text-align: center;height: 345px;
+            strong{display: inline-block;margin-top: 101px;}
+            a{bottom: 0;padding-left: 0;padding-top: 18px;}
+            img{left: 943px;}
+        }
+    }
+}
 
 @include keyframes(rotate){
     100%{@include transform(rotate(360deg));}

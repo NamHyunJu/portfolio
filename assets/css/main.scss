@@ -2,11 +2,11 @@
 @import "_var","_mixin","_function";
 
 #cnt1{
-    position: relative;background-color: $lightGray;padding-top: 96px;
-    background-image: url("../assets/images/main/mint_flower.svg"),url("../assets/images/main/plus.svg"),url("../assets/images/main/triangle.svg"),url("../assets/images/main/red_flower.svg");
+    position: relative;background: $lightGray;padding-top: 96px;
+    background-image: url("../images/main/mint_flower.svg"),url("../images/main/plus.svg"),url("../images/main/triangle.svg"),url("../images/main/red_flower.svg");
     background-repeat: no-repeat;
-    background-size: 50px 50px,32px 799px,110px 189px,65px 65px;
-    background-position: 1096px 243px,right bottom,1498px 80.8%,9.8% 102%;
+    background-position: 896px 243px,1862px 280px,1386px 777px,219px 800px;
+    background-size: 50px,32px 799px,245px 97px,65px;
      h2{
         @include transform(perspective(1000px) rotateY(180deg));
         @include transition(transform 3.5s);
@@ -27,8 +27,8 @@
 }
 #cnt2{
     .gnb{
-        padding: 228px 0;
-        .blob{top: 954.6px;}
+        position: relative;overflow: hidden;padding: 228px 0;
+        .blob{top: 0;}
     }
     #indexGnb{
         position: relative;
