@@ -33,7 +33,6 @@ $(document).ready(function(){
     //스킬
     $('#skill .txt').stop().slideUp();
     
-    _jump.attr({tabIndex:0});
     //left에 가끔씩 오류가 생긴다 왜?
     start=_jump.position().left;
     current=start;
@@ -45,46 +44,55 @@ $(document).ready(function(){
         var skillP=$(document).height()-$('#me').height();
         clearTimeout(timer);
         timer=setTimeout(function(){
-            if(skillP+500<=scrollT && !chk){chk=true;}
+            if(skillP+500<=scrollT && !chk){
+                _jump.attr({tabIndex:0}).focus();
+                chk=true;
+            }
         },50);
     });
     _window.on({
+        //1번만 연습
         'keyup':function(e){
-            if(e.keyCode===39 && !one && !two && !three && chk){
-                _keyboard.find('.right').removeClass('click').siblings('.left').addClass('click');
-                one=true;
-                current+=step;
-                _jump.css({left:current});
-
-            } else if(e.keyCode===37 && one && !two && !three && chk){
-                _keyboard.find('.left').removeClass('click').siblings('.spacebar').addClass('click');
-                two=true;
-                current-=step;
-                _jump.css({left:current});
-            } else if(e.keyCode===32 && one && two && !three && chk){
-                e.preventDefault();
-                _keyboard.find('.spacebar').removeClass('click');
-                _jump.stop().animate({bottom:jump},300,function(){
-                    $(this).stop().animate({bottom:30},800,'easeOutBounce');
-                    _guide.stop().delay(1000).slideUp('fast');
-                    three=true;
-                });
+            if(chk){
+                if(e.keyCode===39 && !one && !two && !three){
+                    _keyboard.find('.right').removeClass('click').siblings('.left').addClass('click');
+                    one=true;
+                    current+=step;
+                    _jump.css({left:current});
+    
+                } else if(e.keyCode===37 && one && !two && !three){
+                    _keyboard.find('.left').removeClass('click').siblings('.spacebar').addClass('click');
+                    two=true;
+                    current-=step;
+                    _jump.css({left:current});
+                } else if(e.keyCode===32 && one && two && !three){
+                    e.preventDefault();
+                    _keyboard.find('.spacebar').removeClass('click');
+                    _jump.stop().animate({bottom:jump},300,function(){
+                        $(this).stop().animate({bottom:30},800,'easeOutBounce');
+                        _guide.stop().delay(1000).slideUp('fast');
+                        three=true;
+                    });
+                }
+    
             }
         },
         'keydown':function(e){
-            if(e.keyCode===39 && current<=end && three){//오른쪽 방향키 눌렀을때
-                current+=step;
-                _jump.css({left:current});
-            }
-            if(e.keyCode===37 && current>=start && three){//왼쪽 방향키 눌렀을때
-                current-=step;
-                _jump.css({left:current});
-            }
-            if(e.keyCode===32 && three){//스페이스바 눌렀을때
-                e.preventDefault();
-                _jump.stop().animate({bottom:jump},300,function(){
-                    $(this).stop().animate({bottom:30},800,'easeOutBounce');
-                });
+            if(three){
+                if(e.keyCode===39 && current<=end){//오른쪽 방향키 눌렀을때
+                    current+=step;
+                    _jump.css({left:current});
+                }
+                if(e.keyCode===37 && current>=start){//왼쪽 방향키 눌렀을때
+                    current-=step;
+                    _jump.css({left:current});
+                }
+                if(e.keyCode===32){//스페이스바 눌렀을때
+                    e.preventDefault();
+                    _jump.stop().animate({bottom:jump},300,function(){
+                        $(this).stop().animate({bottom:30},800,'easeOutBounce');
+                    });
+                }    
             }
         }
     });
