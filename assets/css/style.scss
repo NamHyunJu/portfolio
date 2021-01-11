@@ -230,7 +230,6 @@
 //project
 #projectCnt{
     position: relative;
-    &.p_cnt{height: 2040px;}
     .tit{font-family: NtSnasKR;font-size: 36px;}
     .subtit{font-size: 30px;}
     .txt{
@@ -243,44 +242,37 @@
     }
     .go_btn{
         position: absolute;right: 0;top: 760px;
-        li{float: left;}
         a{
             @include cover;
             @include boxsizing;
             display:inline-block;font-size: 15px;width: 131px;height: 56px;
         }
-        .sitego{color: #ffffff;background: url("../images/icon/sitego.svg") no-repeat;padding: 18px 0 0 12px;margin-right: 69px;}
-        .linkgo{color: $orange;background: url("../images/icon/infogo.svg") no-repeat;padding: 18px 0 0 19px;}
+        .sitego{color: #ffffff;background: url("../images/icon/sitego.svg") no-repeat;padding: 18px 0 0 12px;}
+        //.linkgo{color: $orange;background: url("../images/icon/infogo.svg") no-repeat;padding: 18px 0 0 19px;}
     }
     .img_wrap{
         @include transY-50;
-        position: absolute;left: 0;top: 50%;text-align: center;width: 778px;height: 507px;
-
-        .img{
-            @include transX-50;
-            position: absolute;overflow: hidden;left: 50%;bottom: 0;
+        position: absolute;left: 0;top: 50%;text-align: center;width: 778px;height: 389px;overflow: hidden;
+    }
+    .controller{
+        position: absolute;top: 70px;left: 0;width: 100%;text-align: center;
+        button{
+            position: relative;font-size: 20px;
+            &::after{
+                @include transY-50;
+                content:"";position: absolute;top: 50%;
+            }
         }
-        .controller{
-            @include transX-50;
-            position: absolute;top: 0;left: 50%;width: 100%;
-            button{
-                position: relative;font-size: 20px;
-                &::after{
-                    @include transY-50;
-                    content:"";position: absolute;top: 50%;
-                }
+        .next{
+            &::after{
+                @include cover;
+                right: -32px;background: url("../images/icon/next.svg") no-repeat;width: 27px;height: 26px;
             }
-            .next{
-                &::after{
-                    @include cover;
-                    right: -32px;background: url("../images/icon/next.svg") no-repeat;width: 27px;height: 26px;
-                }
-            }
-            .prev{
-                &::after{
-                    @include cover;
-                    left: -32px;background: url("../images/icon/prev.svg") no-repeat;width: 27px;height: 26px;
-                }
+        }
+        .prev{
+            &::after{
+                @include cover;
+                left: -32px;background: url("../images/icon/prev.svg") no-repeat;width: 27px;height: 26px;
             }
         }
     }
@@ -377,14 +369,14 @@
 }
 
 .project{
-    position: absolute;top: 1080px;left: 0;width: 100%;height: 960px;
+    /* position: absolute;top: 1080px;left: 0;width: 100%; */height: 960px;
     &,.prev,.next{color: #ffffff;}
 }
 #what,#kids{
     .w1400{height: 100%;}
 }
 
-#jaenung,#jaenung_info{background: $lightGray;}
+#jaenung ,#jaenung_info{background: $lightGray;}
 #jaenung{
     z-index:3;
     &,.prev,.next{color: $darkGray;}
@@ -442,11 +434,8 @@
 #what,#what_info{background: $darkGray;}
 #what{
     z-index:2;
-    .img_wrap{
-        width: 524px;height: 640px;top: 57%;
-        .img{width: 337px;height: 571.5px;}
-        .controller .prev{margin-right: 65px;}
-    }
+    .img_wrap{width: 337px;height: 571.5px;left: 100px;}
+    .controller .prev{margin-right: 65px;}
 }
 #what_info{
     &,.color>strong,.color>p,.font>strong,.font>p,.left .f_name,.right .f_name{color: #ffffff;}
@@ -502,6 +491,7 @@
     }
 }
 #kids_info{
+    color: $darkGray;
     .cnt1{
         margin-top: 50px;
         li{
@@ -572,6 +562,7 @@
         }
     }
     .parish{
+        margin-bottom: 200px;
         .subtit{margin: 159px 0 80px;}
         >div{
             &.one,&.two{
