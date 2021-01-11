@@ -544,20 +544,22 @@
         content: "";
         position: absolute;
         top: 50%; }
+    #projectCnt .controller .prev {
+      margin-right: 100px; }
+      #projectCnt .controller .prev::after {
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        background-size: cover !important;
+        left: -32px;
+        background: url("../images/icon/prev.svg") no-repeat;
+        width: 27px;
+        height: 26px; }
     #projectCnt .controller .next::after {
       -webkit-background-size: cover !important;
       -moz-background-size: cover !important;
       background-size: cover !important;
       right: -32px;
       background: url("../images/icon/next.svg") no-repeat;
-      width: 27px;
-      height: 26px; }
-    #projectCnt .controller .prev::after {
-      -webkit-background-size: cover !important;
-      -moz-background-size: cover !important;
-      background-size: cover !important;
-      left: -32px;
-      background: url("../images/icon/prev.svg") no-repeat;
       width: 27px;
       height: 26px; }
 
@@ -1013,12 +1015,16 @@
     #kids_info .design .font .left, #kids_info .design .font .right {
       padding: 0;
       text-align: center; }
+    #kids_info .design .font .left .title {
+      margin-top: 45px; }
     #kids_info .design .font .left .big, #kids_info .design .font .left .small {
       font-family: jalnan; }
     #kids_info .design .font .left .big {
       color: #FFBA1F; }
     #kids_info .design .font .left .small {
       color: #FFCB64; }
+    #kids_info .design .font .right .title {
+      margin-top: 70px; }
     #kids_info .design .font .right .big, #kids_info .design .font .right .small {
       font-family: NtSansKR; }
     #kids_info .design .font .right .big {
@@ -1112,6 +1118,63 @@
         padding-top: 18px; }
       #kids_info .parish .four img {
         left: 943px; }
+
+#report {
+  background: url("../images/report/report_bg.png") repeat-y;
+  color: #ffffff;
+  padding-top: 120px; }
+  #report .w1400 {
+    border: 1px solid gold; }
+  #report .tit, #report strong {
+    font-weight: 400; }
+  #report .tit {
+    font-size: 36px; }
+  #report .tablist {
+    margin: 40px 0 80px;
+    height: 70px; }
+    #report .tablist .tab {
+      position: relative;
+      float: left;
+      width: 350px;
+      text-align: center;
+      height: 100%;
+      line-height: 70px;
+      cursor: url("../images/icon/pointer-1.cur"), url("../images/icon/pointer-1.svg"), pointer; }
+      #report .tablist .tab::after {
+        -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        height: 5px;
+        width: 0; }
+      #report .tablist .tab:nth-child(1)::after {
+        background: #F60005; }
+      #report .tablist .tab:nth-child(2)::after {
+        background: #FCAE26; }
+      #report .tablist .tab:nth-child(3)::after {
+        background: #44AEC6; }
+      #report .tablist .tab:nth-child(4)::after {
+        background: #FB511D; }
+      #report .tablist .tab:hover::after, #report .tablist .tab:focus::after, #report .tablist .tab.active::after {
+        width: 100%;
+        left: 0; }
+  #report strong {
+    font-size: 23px; }
+    #report strong + p {
+      margin: 60px 0 30px; }
+  #report .tabpanel {
+    display: none; }
+    #report .tabpanel.active {
+      display: block; }
+    #report .tabpanel ul li {
+      line-height: 1.5; }
+      #report .tabpanel ul li + li {
+        margin-top: 15px; }
+    #report .tabpanel .img {
+      margin: 60px 0 100px; }
 
 @-webkit-keyframes rotate {
   100% {
