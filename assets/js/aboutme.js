@@ -63,7 +63,7 @@ $(document).ready(function(){
                     two=true;
                     current-=step;
                     _jump.css({left:current});
-                } else if(e.keyCode===32 && one && two && !three){
+                } /* else if(e.keyCode===32 && one && two && !three){
                     e.preventDefault();
                     _keyboard.find('.spacebar').removeClass('click');
                     _jump.stop().animate({bottom:jump},500,function(){
@@ -71,7 +71,7 @@ $(document).ready(function(){
                         _guide.stop().delay(1000).slideUp('fast');
                         three=true;
                     });
-                }
+                } */
             }
         },
         'keydown':function(e){
@@ -101,7 +101,17 @@ $(document).ready(function(){
                 }else if((4*x)+z+(2*hexWid)<=current && current<=(4*x)+z+(3*hexWid)){
                     _skill.find('.ect .txt').stop().delay(510).slideDown();
                 }
-            }    
+            }
+            if(e.keyCode===32 && one && two && !three){
+                e.preventDefault();
+                _keyboard.find('.spacebar').removeClass('click');
+                _jump.stop().animate({bottom:jump},500,function(){
+                    $(this).stop().animate({bottom:30},800,'easeOutBounce');
+                    _guide.stop().delay(1000).slideUp('fast');
+                    three=true;
+                });
+            }
+
         }
     });
 
