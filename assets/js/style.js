@@ -1,4 +1,14 @@
 $(document).ready(function(){
+    var timer=0;
+    $(window).on('scroll',function(){
+        clearTimeout(timer);
+        timer=setTimeout(function(){
+            $('.fade').each(function(){
+                if($(window).scrollTop()>$(this).offset().top-700) $(this).addClass('on');
+            });
+        },10);
+    });
+
     //project
     $('#what,#kids').attr({'aria-hidden':true}).stop().slideUp();
     $('.controller .next').on('click',function(){
@@ -7,6 +17,7 @@ $(document).ready(function(){
         } else{
             $(this).parents('article').attr({'aria-hidden':true}).stop().slideUp().next().attr({'aria-hidden':false}).stop().slideDown();
         }
+        $('.fade.on').removeClass('on');
     });
     $('.controller .prev').on('click',function(){
         if($(this).parents('article').is('#jaenung')){
@@ -14,12 +25,14 @@ $(document).ready(function(){
         } else{
             $(this).parents('article').attr({'aria-hidden':true}).stop().slideUp().prev().attr({'aria-hidden':false}).stop().slideDown();
         }
+        $('.fade.on').removeClass('on');
     });
 
     //report
     $('.tab.first, .tabpanel:first-of-type').addClass('active').attr({tabIndex:0});
     $('.tab.first').attr({'aria-selected':true}).siblings().attr({'aria-selected':false});
     $('.tabpanel:first-of-type').attr({'aria-hidden':false}).siblings('.tabpanel').attr({'aria-hidden':true});
+    $('.tabpanel li,#tabpanel4 p:nth-child(3)').addClass('fade up');
 
     $('.tab').on({
         'click':function(){
@@ -27,6 +40,8 @@ $(document).ready(function(){
 
             var tabNum=$(this).index();
             $('.tabpanel').eq(tabNum).addClass('active').attr({tabIndex:0,'aria-hidden':false}).siblings('.active').removeClass('active').attr({tabIndex:-1,'aria-hidden':true});
+
+            $('.fade.on').removeClass('on');
         },
         //오른쪽(39) 왼쪽(37) home(36) end(35) 엔터(13) 스페이스바(32)
         'keydown':function(e){
@@ -55,5 +70,5 @@ $(document).ready(function(){
         }
     });
 
-    $('.tabpanel li,#tabpanel4 p:nth-child(3)').addClass('fade up');
+    
 });
