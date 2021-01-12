@@ -17,16 +17,15 @@ $(document).ready(function(){
     });
 
     //report
-    $('.tab:first-of-type, .tabpanel:first-of-type').addClass('active').attr({tabIndex:0});
-    $('.tab:first-of-type').attr({'aria-selected':true}).siblings().attr({'aria-selected':false});
+    $('.tab.first, .tabpanel:first-of-type').addClass('active').attr({tabIndex:0});
+    $('.tab.first').attr({'aria-selected':true}).siblings().attr({'aria-selected':false});
     $('.tabpanel:first-of-type').attr({'aria-hidden':false}).siblings('.tabpanel').attr({'aria-hidden':true});
 
-    
     $('.tab').on({
         'click':function(){
             $(this).addClass('active').attr({tabIndex:0,'aria-selected':true}).siblings('.active').removeClass('active').attr({tabIndex:-1,'aria-selected':false});
 
-            var tabNum=$('.tab').index();
+            var tabNum=$(this).index();
             $('.tabpanel').eq(tabNum).addClass('active').attr({tabIndex:0,'aria-hidden':false}).siblings('.active').removeClass('active').attr({tabIndex:-1,'aria-hidden':true});
         },
         //오른쪽(39) 왼쪽(37) home(36) end(35) 엔터(13) 스페이스바(32)

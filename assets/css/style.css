@@ -484,15 +484,12 @@
   #projectCnt .txt, #projectCnt .img_wrap {
     float: left; }
   #projectCnt .img_wrap {
-    /* @include transY-50;
-    position: absolute;left: 0;top: 50%; */
     text-align: center;
     width: 778px;
     height: 389px;
     overflow: hidden;
-    padding-top: 105px; }
+    margin-top: 105px; }
   #projectCnt .txt {
-    /* position: absolute;top: 153px;right: 0; */
     width: 482px;
     text-align: right; }
     #projectCnt .txt .page, #projectCnt .txt .text {
@@ -843,8 +840,7 @@
   #what .img_wrap {
     width: 337px;
     height: 571.5px;
-    margin-left: 93px;
-    padding-top: 35px; }
+    margin: 35px 0 0 93px; }
   #what .txt {
     margin-left: 488px; }
   #what .controller .prev {
@@ -1174,7 +1170,21 @@
       #report .tabpanel ul li + li {
         margin-top: 15px; }
     #report .tabpanel .img {
-      margin: 60px 0 100px; }
+      margin: 60px 0 100px;
+      text-align: center; }
+      #report .tabpanel .img img {
+        border: 1px solid #fff; }
+  #report #tabpanel1 .img2 {
+    margin-bottom: 200px; }
+  #report #tabpanel2 .img4 img {
+    border: none; }
+  #report #tabpanel2 .img5 img:nth-child(1) {
+    display: block; }
+  #report #tabpanel2 .img5 img:nth-child(2) {
+    position: relative; }
+  #report #tabpanel2 .img5 img:nth-child(3) {
+    position: absolute;
+    left: 50%; }
 
 @-webkit-keyframes rotate {
   100% {
