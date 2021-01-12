@@ -618,7 +618,7 @@
     }
 }
 
-#report{.w1400{border: 1px solid gold;}
+#report{
     background: url("../images/report/report_bg.png") repeat-y;color: #ffffff;padding-top: 120px;
     .tit,strong{font-weight: 400;}
     .tit{font-size: 36px;}
@@ -656,13 +656,23 @@
     #tabpanel1 .img2{margin-bottom: 200px;}
     #tabpanel2{
         .img4 img{border: none;}
-        .img5{
-            img:nth-child(1){display:block;}
-            img:nth-child(2){position: relative;}
-            img:nth-child(3){position: absolute;left: 50%;}
+        .img5{position: relative;
+            img:nth-child(1) ,img:nth-child(2){display:block;}
+            img:nth-child(1){margin-bottom: 30px;}
+            img:nth-child(3){position: absolute;left: 20%;top: 260px;width: 800px;}
         }
     }
-
+    #tabpanel3{
+        .img7 img{display:block;}
+        .img8{
+            position: relative;
+            img:nth-child(1){display: block;}
+            img:nth-child(2){
+                @include transY-50;
+                position: absolute;top: 50%;left: 10%;
+            }
+        }
+    }
 }
 
 @include keyframes(rotate){

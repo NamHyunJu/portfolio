@@ -1119,8 +1119,6 @@
   background: url("../images/report/report_bg.png") repeat-y;
   color: #ffffff;
   padding-top: 120px; }
-  #report .w1400 {
-    border: 1px solid gold; }
   #report .tit, #report strong {
     font-weight: 400; }
   #report .tit {
@@ -1178,13 +1176,32 @@
     margin-bottom: 200px; }
   #report #tabpanel2 .img4 img {
     border: none; }
-  #report #tabpanel2 .img5 img:nth-child(1) {
-    display: block; }
-  #report #tabpanel2 .img5 img:nth-child(2) {
+  #report #tabpanel2 .img5 {
     position: relative; }
-  #report #tabpanel2 .img5 img:nth-child(3) {
-    position: absolute;
-    left: 50%; }
+    #report #tabpanel2 .img5 img:nth-child(1), #report #tabpanel2 .img5 img:nth-child(2) {
+      display: block; }
+    #report #tabpanel2 .img5 img:nth-child(1) {
+      margin-bottom: 30px; }
+    #report #tabpanel2 .img5 img:nth-child(3) {
+      position: absolute;
+      left: 20%;
+      top: 260px;
+      width: 800px; }
+  #report #tabpanel3 .img7 img {
+    display: block; }
+  #report #tabpanel3 .img8 {
+    position: relative; }
+    #report #tabpanel3 .img8 img:nth-child(1) {
+      display: block; }
+    #report #tabpanel3 .img8 img:nth-child(2) {
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      left: 10%; }
 
 @-webkit-keyframes rotate {
   100% {
