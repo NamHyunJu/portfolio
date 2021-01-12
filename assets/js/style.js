@@ -54,4 +54,6 @@ $(document).ready(function(){
             }
         }
     });
+
+    $('.tabpanel li,#tabpanel4 p:nth-child(3)').addClass('fade up');
 });

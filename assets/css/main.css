@@ -2,6 +2,7 @@
   position: relative;
   background: #F4F4F4;
   padding-top: 96px;
+  overflow: hidden;
   background-image: url("../images/main/mint_flower.svg"), url("../images/main/plus.svg"), url("../images/main/triangle.svg"), url("../images/main/red_flower.svg");
   background-repeat: no-repeat;
   background-position: 896px 243px,1862px 280px,1386px 777px,219px 800px;
@@ -69,7 +70,7 @@
   text-align: center; }
   #cnt3 p:nth-child(1) {
     margin-top: 180px; }
-  #cnt3 strong {
+  #cnt3 a {
     display: block;
     font-size: 30px;
     font-weight: 400;

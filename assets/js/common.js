@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    var timer=0;
+
     $('.head').load('../common.html .header');
     $('#footer').load('../common.html .link');
 
@@ -25,4 +27,21 @@ $(document).ready(function(){
             $('.gnb_open_btn').focus();
         });
     });
+    $(window).on('scroll',function(){
+        /* clearTimeout(timer);
+        timer=setTimeout(function(){
+            $('.fade').each(function(){
+                if($(window).scrollTop()>$(this).offset().top-700) $(this).addClass('on');
+            });
+        },50); */
+        fade();
+    });
+    function fade(){
+        clearTimeout(timer);
+        timer=setTimeout(function(){
+            $('.fade').each(function(){
+                if($(window).scrollTop()>$(this).offset().top-700) $(this).addClass('on');
+            });
+        },50);
+    }
 });

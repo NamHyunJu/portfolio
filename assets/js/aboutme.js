@@ -22,12 +22,13 @@ $(document).ready(function(){
     $('.click1').hide();
     $('.click2,#me .text,.smile,#me .bg img:nth-child(2)').show();
     $('.txt').stop().animate({right:'-100%'},800);
+    $('.text p').attr({'aria-hidden':true});
     });
 
     //웃는아이콘 클릭
     $('.smile').on('click',function(){
     var btnNum=$(this).index();
-    $('.text p').eq(btnNum-2).addClass('on');
+    $('.text p').eq(btnNum-2).attr({'aria-hidden':false}).addClass('on');
     });
 
     //스킬
@@ -63,15 +64,7 @@ $(document).ready(function(){
                     two=true;
                     current-=step;
                     _jump.css({left:current});
-                } /* else if(e.keyCode===32 && one && two && !three){
-                    e.preventDefault();
-                    _keyboard.find('.spacebar').removeClass('click');
-                    _jump.stop().animate({bottom:jump},500,function(){
-                        $(this).stop().animate({bottom:30},800,'easeOutBounce');
-                        _guide.stop().delay(1000).slideUp('fast');
-                        three=true;
-                    });
-                } */
+                }
             }
         },
         'keydown':function(e){
