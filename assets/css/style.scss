@@ -120,7 +120,6 @@
             span{
                 position: absolute;font-size: 20px;
                 &::before{
-                    @include cover;
                     @include transY-50;
                     content: "";position: absolute;top: 50%;width: 59px;height: 10px;background: no-repeat;
                 }
