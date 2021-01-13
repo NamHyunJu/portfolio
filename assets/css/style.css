@@ -7,7 +7,7 @@
   top: 96px;
   background-repeat: no-repeat;
   background-image: url("../images/common/yellow_line.svg"), url("../images/common/orange_bg.svg"), url("../images/common/yellow_line.svg"), url("../images/aboutme/bluesky_bg.svg");
-  background-position: 1090px 250px,1570px 422px,1474px 1057px,150px 1168px; }
+  background-position: 1090px 250px,1570px 440px,1800px 1057px,150px 1168px; }
   #me .bg img {
     -webkit-animation: rotate 60s linear infinite;
     -moz-animation: rotate 60s linear infinite;
