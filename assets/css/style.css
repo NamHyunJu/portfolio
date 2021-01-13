@@ -471,15 +471,15 @@
     font-size: 36px;
     width: 142%; }
   #skill .movetxt .full {
-    -webkit-animation: movetxt 20s linear infinite;
-    -moz-animation: movetxt 20s linear infinite;
-    -o-animation: movetxt 20s linear infinite;
-    animation: movetxt 20s linear infinite; }
+    -webkit-animation: movetxt 30s linear infinite;
+    -moz-animation: movetxt 30s linear infinite;
+    -o-animation: movetxt 30s linear infinite;
+    animation: movetxt 30s linear infinite; }
   #skill .movetxt .line {
-    -webkit-animation: movetxtReverse 15s linear infinite;
-    -moz-animation: movetxtReverse 15s linear infinite;
-    -o-animation: movetxtReverse 15s linear infinite;
-    animation: movetxtReverse 15s linear infinite;
+    -webkit-animation: movetxtReverse 30s linear infinite;
+    -moz-animation: movetxtReverse 30s linear infinite;
+    -o-animation: movetxtReverse 30s linear infinite;
+    animation: movetxtReverse 30s linear infinite;
     font-family: hopang;
     margin-top: 20px; }
 

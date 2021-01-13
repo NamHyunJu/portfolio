@@ -223,8 +223,8 @@
     .movetxt{
         margin-top: 89px;overflow:hidden;
         p{font-size: 36px;width: 142%;}
-        .full{@include animation(movetxt 20s linear infinite);}
-        .line{@include animation(movetxtReverse 15s linear infinite);font-family: hopang;margin-top: 20px;}
+        .full{@include animation(movetxt 30s linear infinite);}
+        .line{@include animation(movetxtReverse 30s linear infinite);font-family: hopang;margin-top: 20px;}
     }
 }
 
